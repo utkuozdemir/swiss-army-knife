@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: swiss-army-knife
+spec:
+  containers:
+    - image: utkuozdemir/swiss-army-knife:v0.3.0
+      name: swiss-army-knife
+  terminationGracePeriodSeconds: 0
