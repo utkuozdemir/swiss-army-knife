@@ -19,7 +19,9 @@ RUN apk add --no-cache \
   rsync \
   openssh-client \
   postgresql-client \
-  mysql-client && \
+  mysql-client \
+  iperf3 \
+  && \
   adduser -D -u 1000 user && \
   sed -e 's/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/g' -i /etc/sudoers && \
   adduser user wheel
