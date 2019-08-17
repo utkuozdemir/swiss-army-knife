@@ -1,3 +1,8 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: swiss-army-knife
+---
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
@@ -11,8 +16,10 @@ spec:
       labels:
         app: swiss-army-knife
     spec:
+      serviceAccountName: swiss-army-knife
       containers:
         - image: utkuozdemir/swiss-army-knife:v0.3.0
+          imagePullPolicy: Always
           name: swiss-army-knife
       tolerations:
         - effect: NoSchedule

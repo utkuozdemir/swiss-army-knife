@@ -1,8 +1,14 @@
 apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: swiss-army-knife
+---
+apiVersion: v1
 kind: Pod
 metadata:
   name: swiss-army-knife
 spec:
+  serviceAccountName: swiss-army-knife
   containers:
     - image: utkuozdemir/swiss-army-knife:v0.3.0
       name: swiss-army-knife
