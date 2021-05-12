@@ -23,4 +23,8 @@ spec:
       containers:
         - image: utkuozdemir/swiss-army-knife:v0.4.0
           name: swiss-army-knife
+          command:
+            - tail
+            - -f
+            - /dev/null
       terminationGracePeriodSeconds: 0

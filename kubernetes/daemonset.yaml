@@ -19,8 +19,11 @@ spec:
       serviceAccountName: swiss-army-knife
       containers:
         - image: utkuozdemir/swiss-army-knife:v0.4.0
-          imagePullPolicy: Always
           name: swiss-army-knife
+          command:
+            - tail
+            - -f
+            - /dev/null
       tolerations:
         - effect: NoSchedule
           key: node-role.kubernetes.io/master
