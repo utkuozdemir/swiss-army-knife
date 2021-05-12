@@ -1,4 +1,4 @@
 version: "3"
 services:
   swiss-army-knife:
-    image: utkuozdemir/swiss-army-knife:v0.3.0
+    image: utkuozdemir/swiss-army-knife:v0.4.0
